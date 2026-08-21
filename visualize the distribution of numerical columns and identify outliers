@@ -1,0 +1,4 @@
+plt.figure(figsize=(12,8))
+sns.boxplot(data=df,palette='binary')
+plt.title("Boxplot for Outliers")
+plt.show()
