@@ -1,0 +1,11 @@
+from sklearn.model_selection import cross_val_score
+scores=cross_val_score(lr,x_train,y_train,cv=5,scoring="accuracy")
+print("Cross validation scores:",scores)
+print("accuracy_score:",scores.mean())
+print("Standard deviation:",scores.std())
+y_preds=lr.predict(x_test)
+y_predss=lr.predict(x_train)
+lr_accuracy=accuracy_score(y_test,y_preds)
+lr_accuracyy=accuracy_score(y_train,y_predss)
+print(f"Accuracy LogesticRegression:{lr_accuracy*100}")
+print(f"Accuracy LogesticRegression:{lr_accuracyy*100}")
