@@ -1,0 +1,2 @@
+IQR=Q3-Q1
+print(IQR)
