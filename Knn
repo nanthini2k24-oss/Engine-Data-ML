@@ -1,0 +1,10 @@
+knn=KNeighborsClassifier(
+    n_neighbors=40
+)
+knn.fit(x_train,y_train)
+y_pred=knn.predict(x_test)
+y_predd=knn.predict(x_train)
+knn_accuracy=accuracy_score(y_test,y_pred)
+knn_accuracyy=accuracy_score(y_train,y_predd)
+print(f"Accuracy KNN:{knn_accuracy*100}")
+print(f"Accuracy KNN:{knn_accuracyy*100}")
