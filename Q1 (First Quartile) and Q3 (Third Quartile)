@@ -1,0 +1,5 @@
+Q1=df[['Engine rpm','Coolant temp']].quantile(0.25)
+print(Q1)
+
+Q3=df[['Engine rpm','Coolant temp']].quantile(0.75)
+print(Q3)
