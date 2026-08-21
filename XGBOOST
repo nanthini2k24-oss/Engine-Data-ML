@@ -1,0 +1,9 @@
+from xgboost import XGBClassifier
+xgb=XGBClassifier()
+xgb.fit(x_train,y_train)
+y_preds=xgb.predict(x_test)
+y_predss=xgb.predict(x_train)
+xgb_accuracy=accuracy_score(y_test,y_preds)
+xgb_accuracyy=accuracy_score(y_train,y_predss)
+print(f"Accuracy XGB:{xgb_accuracy*100}")
+print(f"Accuracy XGB:{xgb_accuracyy*100}")
