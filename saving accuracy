@@ -1,0 +1,3 @@
+import joblib
+joblib.dump(dtc,"dtc.pkl") 
+dtc = joblib.load("dtc.pkl")
