@@ -1,0 +1,4 @@
+knn=KNeighborsClassifier(
+    n_neighbors=40
+)
+knn.fit(x_train,y_train)
