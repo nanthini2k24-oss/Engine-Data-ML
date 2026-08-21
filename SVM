@@ -1,0 +1,14 @@
+from sklearn.svm import SVC
+svm=SVC(
+    kernel="linear",
+    C=1.0,
+    degree=3,
+    gamma="scale"
+)
+svm.fit(x_train,y_train)
+y_pre=svm.predict(x_test)
+y_pree=svm.predict(x_train)
+svm_accuracy=accuracy_score(y_test,y_pre)
+svm_accuracyy=accuracy_score(y_train,y_pree)
+print(f"Accuracy SVM:{svm_accuracy*100}")
+print(f"Accuracy SVM:{svm_accuracyy*100}")
