@@ -1,0 +1,3 @@
+outlier=(df[['Engine rpm','Coolant temp']]<Lowerlimit)|(df[['Engine rpm','Coolant temp']]>Upperlimit)
+outliers=df[~outlier.any(axis=1)]
+outliers
