@@ -1,0 +1,4 @@
+Lowerlimit=Q1-1.5*IQR
+Upperlimit=Q1+1.5*IQR
+print(Upperlimit)
+print(Lowerlimit)
