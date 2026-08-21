@@ -1,0 +1,14 @@
+from sklearn.ensemble import RandomForestClassifier
+rdf=RandomForestClassifier()
+rdf.fit(x_train,y_train)
+from sklearn.model_selection import cross_val_score
+scores=cross_val_score(rdf,x_train,y_train,cv=5,scoring="accuracy")
+print("Cross validation scores:",scores)
+print("accuracy_score:",scores.mean())
+print("Standard deviation:",scores.std())
+y_predi=rdf.predict(x_test)
+y_predii=rdf.predict(x_train)
+rdf_accuracy=accuracy_score(y_test,y_predi)
+rdf_accuracyy=accuracy_score(y_train,y_predii)
+print(f"Accuracy RDF:{rdf_accuracy*100}")
+print(f"Accuracy RDF:{rdf_accuracyy*100}")
